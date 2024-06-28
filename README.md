@@ -25,7 +25,7 @@ To run PE Structure Viewer, you need to have Python and PyQt5 installed. Follow 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pestructureviewer.git
+   git clone https://github.com/ghosts621/pestructureviewer.git
    cd pestructureviewer
    ```
 
