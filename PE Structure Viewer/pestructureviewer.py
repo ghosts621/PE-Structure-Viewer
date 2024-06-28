@@ -9,8 +9,8 @@ from PyQt5.QtCore import Qt
 class PEViewer(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("PE Structure Viewer By Naor Evgi")
-        self.setGeometry(100, 100, 1800, 800)  # Increase the width to accommodate the image
+        self.setWindowTitle("PE Structure Viewer")
+        self.setGeometry(100, 100, 1800, 800)
 
         self.setWindowIcon(QIcon('Icon.png'))
 
@@ -65,14 +65,12 @@ class PEViewer(QMainWindow):
 
         # Add the image to the right layout
         self.image_label = QLabel()
-        self.image_path = 'Portable_Executable_32_bit_Structure.png'  # Update this path as needed
+        self.image_path = 'Portable_Executable_32_bit_Structure.png'
         pixmap = QPixmap(self.image_path)
-        scaled_pixmap = pixmap.scaled(1000, 1200,
-                                      aspectRatioMode=Qt.KeepAspectRatio)  # Set the desired width and height
+        scaled_pixmap = pixmap.scaled(1000, 1200,aspectRatioMode=Qt.KeepAspectRatio)
         self.image_label.setPixmap(scaled_pixmap)
         self.right_layout.addWidget(self.image_label)
 
-        # Mapping of struct names to header files
         self.struct_to_header = {
             "IMAGE_DOS_HEADER": "winnt.h",
             "IMAGE_NT_HEADERS": "winnt.h",
@@ -111,7 +109,7 @@ class PEViewer(QMainWindow):
     def reset_colors(self, parent):
         for i in range(parent.childCount()):
             item = parent.child(i)
-            item.setForeground(0, QColor(0, 0, 0))  # Reset to default color
+            item.setForeground(0, QColor(0, 0, 0))
             self.reset_colors(item)
 
     def find_items(self, parent, text, search_type):
@@ -141,7 +139,7 @@ class PEViewer(QMainWindow):
         self.tree.expandItem(item)
         self.tree.setCurrentItem(item)
         self.tree.scrollToItem(item)
-        item.setForeground(0, QColor(255, 0, 0))  # Highlight found item
+        item.setForeground(0, QColor(255, 0, 0))
 
     def add_field(self, parent, name, offset, description):
         field_item = QTreeWidgetItem([name])
