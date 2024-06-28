@@ -1,6 +1,3 @@
-# PE-Structure-Viewer
-
-
 # PE Structure Viewer
 
 PE Structure Viewer is a graphical tool developed using PyQt5 to visualize and explore the Portable Executable (PE) file format structure. It allows users to navigate through various PE headers and sections, providing detailed information about each field.
