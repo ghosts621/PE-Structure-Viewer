@@ -12,7 +12,7 @@ PE Structure Viewer is a graphical tool developed using PyQt5 to visualize and e
 
 ## Screenshots
 
-![PE Structure Viewer Screenshot]((docs/PE Structure Viewer.png))
+![PE Structure Viewer Screenshot]((docs/PE_Structure_Viewer.png))
 
 *Add a descriptive screenshot here to showcase your tool's interface. Save the screenshot in the repository and update the path accordingly.*
 
